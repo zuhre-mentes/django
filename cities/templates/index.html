@@ -1,0 +1,99 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Journey&Journal</title>
+    <link rel="stylesheet"  href="{% static 'styles.css' %}">
+</head>
+
+<body>
+    <!-- header section start-->
+    <header class="header">
+        <a href="#" class="logo">
+            <img src="{% static 'images/logo.png' %}" alt="logo">
+        </a>
+        <nav class="navbar">
+            <a href="#" class="">Home</a>
+            <a href="#about" class="">About</a>
+            <a href="#contact" class="">Contact</a>
+        </nav>
+        <div class="buttons">
+            <a href="{% url 'login' %}" class="btn">LOG IN</a>
+        </div>
+    </header>
+    <!-- header section end-->
+
+    <!-- home section start-->
+    <section class="home">
+        <div class="content">
+            <h3>JOURNEY & JOURNAL</h3>
+            <p>
+                DISCOVERING TURKIYE, ONE STEP AT A TIME
+            </p>
+        </div>
+    </section>
+    <!-- home section end-->
+
+    <!-- about section start-->
+    <section id="about" class="about">
+        <h1 class="heading">about <span>us</span></h1>
+
+            <div class="content">
+                <h3>"Journey Journal: Discovering Turkiye, One Step at a Time"</h3>
+    <p>Journey Journal'a hoş geldiniz, sürükleyici seyahat deneyimlerinizin son durağı! Biz, hayatın en büyük maceralarının tek bir adımla başladığına inanan tutkulu gezginlerden oluşan bir ekibiz.</p>
+    <p>Journey Journal olarak, size dünyanın gizli mücevherlerini keşfetmenize, heyecan verici yolculuklara çıkmanıza ve ömür boyu sürecek anılar yaratmanıza yardımcı olmaya adanmışız. Eğer deneyimli bir kaşif veya ilk kez seyahat eden biriyseniz, sizinle her adımda ilham vermek, bilgilendirmek ve rehberlik etmek için buradayız.</p>
+    <p>Misyonumuz basit: içimizdeki gezgin ruhu ateşlemek ve sizi dünyanın uzak köşelerini keşfetmeye teşvik etmek. Sıradışı doğal harikalardan canlı kültürel merkezlere kadar, gezegenimizin çeşitliliğini ve güzelliğini sergilemeyi taahhüt ediyoruz.</p>
+    <p>Bizimle sıradışı yollara çıkın, benzer ruhlu maceracılarla bağlantı kurun ve keşif ruhunu kucaklayın. Turkiye sizi bekliyor - bir sonraki büyük maceranıza çıkmaya hazır mısınız?</p>
+            </div>
+
+    </section>
+    <!-- about section end-->
+
+    <!-- contact section start-->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2>Contact Us</h2>
+            <div class="contact-wrapper">
+                <div class="contact-form">
+                    <h3>Send us a message</h3>
+                    <form>
+                        <div class="form-group">
+                            <input type="text" name="name" placeholder="Your Name">
+                        </div>
+                        <div class="form-group">
+                            <input type="email" name="email" placeholder="Your Email">
+                        </div>
+                        <div class="form-group">
+                            <textarea name="message" placeholder="Your Message"></textarea>
+                        </div>
+                        <button type="submit">Send Message</button>
+                    </form>
+                </div>
+                <div class="contact-info">
+                    <h3>Contact Information</h3>
+                    <p><i class="fas fa-phone"></i> +90 535 845 62 92</p>
+                    <p><i class="fas fa-envelope"></i> zuhrementes6@gmail.com</p>
+                    <p><i class="fas fa-map-marker-alt"></i> Yaseminler Street, Istanbul, Turkey</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- contact section end-->
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            document.querySelector('.navbar a[href="#about"]').addEventListener('click', function(e) {
+                e.preventDefault();
+                document.querySelector('#about').scrollIntoView({ behavior: 'smooth' });
+            });
+
+            document.querySelector('.navbar a[href="#contact"]').addEventListener('click', function(e) {
+                e.preventDefault();
+                document.querySelector('#contact').scrollIntoView({ behavior: 'smooth' });
+            });
+        });
+    </script>
+</body>
+</html>
