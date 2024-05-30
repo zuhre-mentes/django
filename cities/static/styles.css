@@ -1,0 +1,213 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root {
+    --main-color: #ebba87;
+    --black-color: #121212; /kaydirma Ã§ubuÄŸu rengi/
+    --border: 0.1rem solid rgba(255, 255, 255, 0.4);
+}
+
+* {
+    font-family: "Poppins", sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    text-transform: capitalize;
+    transition: 0.2s ease;
+}
+/*! base html codes */
+html{
+    font-size: 62.5%;
+    overflow-x: hidden;
+    scroll-padding-top: 9rem;
+    scroll-behavior: smooth;
+    }
+body {
+    background-color: var(--main-color); /* Sayfa arka plan rengini --main-color deÄŸiÅŸkenine ayarla */
+    height: 200vh;
+}
+section{
+   padding: 3.5rem 7%;
+   }
+.btn {
+   margin-top:1rem;
+   display: inline-block;
+   padding: 2rem 3.75rem;
+   border-radius: 30rem;
+   font-size: 1.7rem;
+   color: #fff;
+   background-color: var(--black-color);
+   }
+/*! header start */
+
+.header .logo img {
+    height: 10rem;
+}
+.header {
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 7%; /* logo ve yazÄ±lar arasÄ± boÅŸluk*/
+  margin: 2rem 7%; /* ilki yukarÄ±daki boÅŸluk 2. saÄŸ sol boÅŸluÄŸu*/
+  border-radius: 30rem;
+  box-shadow: 0px 0px 17px -2px rgba(0,0,0, 0.75); /* gÃ¶lgelendirme */
+  position: sticky;
+  top: 0;
+  z-index: 1000; /* menÃ¼ Ã§ubuÄŸu sayfadakilerden Ã¼stte*/
+
+}
+.header .navbar a {
+  margin: 0 1.5rem;
+  font-size: 2rem;
+  color: var(--black-color);
+  border-bottom: 0.1rem solid transparent;
+}
+.header .navbar .active,
+.header .navbar a:hover {
+  border-bottom: 0.1rem solid transparent;
+  border-color: var(--main-color);
+  padding-bottom: 0.5rem;
+  }
+.header .buttons button{
+   cursor: pointer;
+   font-size: 2rem;
+   margin-left: 2rem;
+   background-color: transparent;
+}
+/*! header end */
+/*! home start */
+.home{
+    min-height: 100vh;
+    background: url(../static/images/home.jpg) no-repeat;
+    background-size: cover;
+    background-position: center;
+    margin-top: -14.5rem;
+    display: flex;
+    align-items: center;
+}
+
+.home .content{
+    max-width: 60rem;
+}
+.home .content h3{
+    font-size: 6rem;
+    color: #fff
+}
+.home .content p{
+    font-size: 2rem;
+    font-weight: 300;
+    line-height: 1.8;
+    padding: 1rem 0;
+    color: #fff
+
+}
+/*! home end */
+
+/*! about start */
+.about .row {
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 10rem;
+
+.about .row .content {
+    flex: 1 1 45rem;
+
+}
+
+.about .row .content h3 {
+    font-size: 3rem;
+    color: #000000;
+}
+
+.about .row .content p {
+    font-size: 1.6rem;
+    color: #000000;
+    padding: 1rem 0;
+    line-height: 1.8;
+}
+
+/*! about end */
+/*! contact start */
+.contact{
+    min-height: 100vh;
+    padding: 50px;
+    text-align: center;
+    }
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    }
+.container h2 {
+    font-size: 36px;
+    margin-bottom: 40px;
+    color: #333;
+    }
+.contact-wrapper {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 30px;
+    }
+.contact-form {
+    text-align: left;
+}
+.contact-form h3 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #333;
+}
+.form-group {
+    margin-bottom: 20px;
+    }
+input, textarea {
+    width:100%;
+    padding: 12px;
+    border-radius: 8px;
+    border:none;
+    background-color: #f8f9fa;
+    color: #333;
+    }
+input:focus,
+textarea:focus{
+    outline:none;
+    box-shadow: 0 0 8px #bbb;
+    }
+button {
+    display: inline-block;
+    padding:12px 24px;
+    background-color: #000000;
+    color: #fff;
+    border:none;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+button:hover {
+    background-color: #45a049;
+}
+.contac.-info {
+    tex-align:left;
+}
+.contact-info h3 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #333;
+}
+.contact-info p {
+    margin-bottom: 10px;
+    color: #000000;
+}
+.contact-info i {
+    color: #000000;
+    margin-right: 10px;
+}
+@media screen and (max-width: 768px) {
+    .container {
+        padding: 20px;
+        }
+    .container-wrapper {
+        grid-template-columns: 1fr;
+    }
+}
+/*! contact end */
