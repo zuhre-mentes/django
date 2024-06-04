@@ -62,7 +62,7 @@ def registration_page(request):
         return redirect('/registration/')
 
     return render(request, 'registration.html')
-    
+
 def second_page(request):
     cities = City.objects.all()
     return render(request, 'second.html', {'cities': cities})
@@ -78,3 +78,4 @@ def city_detail(request, city_name):
         return render(request, template_name)
     except TemplateDoesNotExist:
         raise Http404('<h1>City not found</h1>')
+
