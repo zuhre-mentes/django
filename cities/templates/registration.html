@@ -7,7 +7,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Registration</title>
     <link rel="stylesheet" href="{% static 'login.css' %}">
-
 </head>
 <body>
     <div class="container mt-5">
@@ -17,8 +16,6 @@
 
             <!-- Registration form heading -->
             <h1 style="text-align: center;"><span style="color: #422508;">REGISTRATION</span></h1>
-
-
 
             <!-- Display error/success messages -->
             {% if messages %}
@@ -31,29 +28,29 @@
 
             <!-- First Name input field -->
             <div class="form-group">
-                <label for="exampleInputEmail1">First name</label>
-                <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+                <label for="first_name">First name</label>
+                <input type="text" class="form-control" id="first_name" aria-describedby="emailHelp"
                     placeholder="Enter First name" name="first_name" required>
             </div>
 
             <!-- Last Name input field -->
             <div class="form-group">
-                <label for="exampleInputEmail1">Last name</label>
-                <input type="text" name="last_name" class="form-control" id="exampleInputEmail1"
+                <label for="last_name">Last name</label>
+                <input type="text" name="last_name" class="form-control" id="last_name"
                     aria-describedby="emailHelp" placeholder="Enter Last name" required>
             </div>
 
-            <!-- Username input field -->
+            <!-- Email input field -->
             <div class="form-group">
-                <label for="exampleInputEmail1">Email</label>
-                <input type="text" class="form-control" name="email" id="exampleInputEmail1"
+                <label for="email">Email</label>
+                <input type="email" class="form-control" name="email" id="email"
                     aria-describedby="emailHelp" placeholder="Enter email" required>
             </div>
 
             <!-- Password input field -->
             <div class="form-group">
-                <label for="exampleInputPassword1">Password</label>
-                <input type="password" class="form-control" name="password" id="exampleInputPassword1"
+                <label for="password">Password</label>
+                <input type="password" class="form-control" name="password" id="password"
                     placeholder="Password" required>
             </div>
 
