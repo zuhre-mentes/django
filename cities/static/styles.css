@@ -111,6 +111,16 @@ section{
     display: flex;
     flex-wrap: wrap;
     column-gap: 10rem;
+}
+
+.about .row .image {
+    flex: 1 1 45rem;
+    text-align: right;
+}
+
+.about .row img {
+    width: 40%; /* Resmi geniÅŸliÄŸi %100 olarak ayarlayÄ±n */
+}
 
 .about .row .content {
     flex: 1 1 45rem;
@@ -211,3 +221,4 @@ button:hover {
     }
 }
 /*! contact end */
+
