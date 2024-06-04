@@ -36,8 +36,11 @@ def registration_page(request):
     if request.method == 'POST':
         first_name = request.POST.get('first_name')
         last_name = request.POST.get('last_name')
-        username = request.POST.get('username')
+        email = request.POST.get('email')
         password = request.POST.get('password')
+
+        # Kullanıcı adı olarak email'i kullanabilirsiniz
+        username = email.split('@')[0]
 
         user = User.objects.filter(username=username)
 
@@ -48,7 +51,8 @@ def registration_page(request):
         user = User.objects.create_user(
             first_name=first_name,
             last_name=last_name,
-            username=username
+            username=username,
+            email=email
         )
 
         user.set_password(password)
@@ -58,7 +62,7 @@ def registration_page(request):
         return redirect('/registration/')
 
     return render(request, 'registration.html')
-
+    
 def second_page(request):
     cities = City.objects.all()
     return render(request, 'second.html', {'cities': cities})
